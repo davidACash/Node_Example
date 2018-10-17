@@ -28,7 +28,7 @@
 <script>
     $.ajax({
         type:"GET",
-        url:"http://localhost:3000/api/books?ord=desc",
+        url:"/api/books?ord=desc",
         success:(data,status,xhr)=>{
             let template = ``;
             data.map((item)=>{
