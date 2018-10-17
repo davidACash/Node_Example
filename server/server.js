@@ -9,7 +9,7 @@ app.use(bodyParser.json());
 //DB
 const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost:27017/bookDB', {useNewUrlParser:true});
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/bookDB', {useNewUrlParser:true});
 
 //Models
 const {Book} = require('./models/books');
